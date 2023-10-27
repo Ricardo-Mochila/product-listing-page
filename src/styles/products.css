@@ -1,0 +1,95 @@
+.product {
+    padding: calc(var(--general_padding) * 2) var(--general_padding);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img,
+.product .image {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.product .product-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.product .product-info > p {
+    margin: 0 0 5px 0;
+}
+
+.product .product-info .category {
+    font-size: 12px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.product .product-info .price {
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.product button,
+.product .button {
+    position: relative;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.product button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.product button:hover::before {
+    scale: 1.1;
+}
+
+.product button span {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.product.skeleton .image,
+.product.skeleton .category,
+.product.skeleton .title,
+.product.skeleton .price,
+.product.skeleton .button {
+    color: transparent;
+    box-sizing: border-box;
+    background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 300% 200%;
+    animation: 2s shine linear infinite;
+}
+
+  
+@keyframes shine {
+    to {
+        background-position-x: -300%;
+    }
+}
+  
+
+
+.product.skeleton .product-info > p {
+    margin: 0 0 10px 0;
+}

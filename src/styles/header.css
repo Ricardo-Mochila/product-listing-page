@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--general_padding) calc(var(--general_padding) * 2);
+    height: var(--header_height);
+    background-color: black;
+    color: white;
+}
+
+header .cart-button {
+    position: relative;
+}
+
+header svg {
+    font-size: 20px;
+}
+
+header span {
+    background: white;
+    color: black;
+    border-radius: 100%;
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
